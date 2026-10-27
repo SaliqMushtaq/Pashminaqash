@@ -1,0 +1,112 @@
+:root {
+  --paper: #faf7f1;
+  --paper-deep: #f1eae0;
+  --ink: #30231f;
+  --muted: #796e65;
+  --line: #ded4c8;
+  --accent: #a44e3e;
+  --soft-green: #e9dfd0;
+}
+
+.announcement {
+  background: #30231f;
+}
+
+.wordmark-name {
+  font-size: 13px;
+  letter-spacing: 0.035em;
+}
+
+.hero h1 {
+  font-size: clamp(59px, 6.5vw, 94px);
+}
+
+.hero-image-wrap {
+  background: #e9dfd0;
+}
+
+.hero-image {
+  object-position: center 34%;
+}
+
+.hero-sticker {
+  background: #e8d5ac;
+}
+
+.button-dark {
+  background: #462b27;
+}
+
+.category-pill.active {
+  background: #462b27;
+}
+
+.product-image-wrap {
+  background: #eee6db;
+}
+
+.product-badge {
+  color: #462b27;
+}
+
+.quick-add {
+  color: #30231f;
+}
+
+.quick-add:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.stacked-form select {
+  width: 100%;
+  min-height: 43px;
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: #fffdf9;
+  color: var(--ink);
+}
+
+.product-image {
+  object-position: center 36%;
+}
+
+.manifesto-image img {
+  object-position: center 35%;
+}
+
+.site-footer {
+  background: #30231f;
+}
+
+.footer-wordmark .wordmark-name,
+.site-footer > p,
+.footer-links a,
+.footer-links button,
+.footer-bottom {
+  color: #f4ede4;
+}
+
+@media (max-width: 720px) {
+  .wordmark-name {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 12vw, 76px);
+  }
+
+  .quick-add {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .quick-add {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

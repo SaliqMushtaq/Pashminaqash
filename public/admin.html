@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf7f1">
+  <meta name="description" content="Manage PashminaQash orders and shipping.">
+  <title>Order desk — PashminaQash</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/brand.css">
+  <link rel="stylesheet" href="/admin.css">
+  <script src="/admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="PashminaQash home"><img class="brand-mark" src="/images/pashminaqash-mark.svg" alt=""><span class="wordmark-name">PashminaQash</span></a>
+    <span class="admin-label">PRIVATE ORDER DESK</span>
+    <button id="logout-button" class="button button-outline" type="button" hidden>Sign out</button>
+  </header>
+  <main class="admin-main">
+    <section id="login-panel" class="admin-login-panel">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Store owner</p>
+      <h1>Your order <em>desk.</em></h1>
+      <p>Sign in to review purchases, collect courier rates, assign AWB tracking and update deliveries.</p>
+      <form id="login-form" class="stacked-form">
+        <label>Email<input name="email" type="email" required autocomplete="username"></label>
+        <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+        <p id="login-error" class="form-error" role="alert"></p>
+        <button class="button button-dark full-button" type="submit">Sign in to orders <span>↗</span></button>
+      </form>
+      <a class="text-link admin-back" href="/">← Back to PashminaQash</a>
+    </section>
+    <section id="orders-panel" hidden>
+      <div class="admin-heading">
+        <div><p class="eyebrow"><span class="eyebrow-line"></span>Store operations</p><h1>Orders, <em>with care.</em></h1><p id="admin-summary" class="muted-copy"></p></div>
+        <button id="refresh-orders" class="button button-outline" type="button">Refresh orders ↻</button>
+      </div>
+      <div id="setup-notice" class="setup-notice" hidden></div>
+      <p id="orders-error" class="form-error" role="alert"></p>
+      <div id="orders-list" class="orders-list"></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

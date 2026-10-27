@@ -1,0 +1,246 @@
+.admin-page {
+  min-height: 100vh;
+}
+
+.admin-label {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+.admin-main {
+  width: min(1040px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 74px 0 110px;
+}
+
+.admin-login-panel {
+  width: min(440px, 100%);
+  margin: 30px auto;
+  padding: clamp(24px, 5vw, 48px);
+  background: #fffdf9;
+  border: 1px solid var(--line);
+}
+
+.admin-login-panel h1,
+.admin-heading h1 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+.admin-login-panel h1 em,
+.admin-heading h1 em {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.admin-login-panel > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.admin-back {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.admin-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.admin-heading .muted-copy {
+  margin: 0;
+}
+
+.setup-notice {
+  margin: 20px 0;
+  padding: 15px 17px;
+  border: 1px solid #ddc494;
+  background: #fbf1dc;
+  color: #55442c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.orders-list {
+  display: grid;
+  gap: 16px;
+}
+
+.admin-order {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: #fffdf9;
+}
+
+.admin-order-head,
+.admin-order-total,
+.admin-action-row,
+.courier-choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-order-head {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-order-head h2 {
+  margin: 0 0 4px;
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.admin-order-head p,
+.admin-order-details,
+.admin-order-lines,
+.admin-order-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+.admin-order-meta {
+  text-align: right;
+}
+
+.admin-order-details {
+  padding: 16px 0;
+  overflow-wrap: anywhere;
+}
+
+.admin-order-lines {
+  padding: 12px 14px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.admin-order-total {
+  justify-content: flex-end;
+  padding: 14px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.admin-order-total strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.admin-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-actions select,
+.admin-actions input {
+  min-width: 0;
+  min-height: 43px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: #fffdf9;
+}
+
+.admin-actions button {
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  background: transparent;
+  font-size: 10px;
+}
+
+.admin-actions button:hover {
+  background: var(--paper-deep);
+}
+
+.admin-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.admin-action-row {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.admin-action-row .button-dark {
+  background: #462b27;
+  color: white;
+}
+
+.courier-choice {
+  justify-content: flex-start;
+}
+
+.courier-choice select {
+  flex: 1;
+}
+
+.admin-shipment-status {
+  display: inline-block;
+  padding: 6px 9px;
+  background: var(--soft-green);
+  color: var(--ink);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.admin-error {
+  color: #963b2d;
+}
+
+.admin-empty {
+  padding: 35px;
+  border: 1px dashed var(--line);
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .admin-main {
+    width: min(100% - 28px, 1040px);
+    padding-top: 38px;
+  }
+
+  .admin-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-order {
+    padding: 15px;
+  }
+
+  .admin-order-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-order-meta {
+    text-align: left;
+  }
+
+  .admin-action-row > *,
+  .courier-choice > * {
+    flex: 1 1 100%;
+  }
+}
